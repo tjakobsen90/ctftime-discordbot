@@ -25,15 +25,14 @@ def main():
     ctfs = feedparser.parse(r.content)
 
     for ctf in ctfs.entries:
+        # Drop if it is a certain type CTF
+        if "Attack-Defense" in ctf.format_text:
+            continue
+
         # If the CTF is already posted, skip it
         ctf_id = ctf.ctftime_url.replace("/event/", "")
         ctf_ids = open("./ctf_ids.txt", "r+")
         if ctf_id in ctf_ids.read():
-            ctf_ids.close()
-            continue
-
-        # Drop if it is a certain type CTF
-        if "Attack-Defense" in ctf.format_text:
             ctf_ids.close()
             continue
 
