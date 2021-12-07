@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# https://github.com/tjakobsen90/ctftime-discordbot
+
 from discord_webhook import DiscordWebhook, DiscordEmbed
 from datetime import datetime
 
