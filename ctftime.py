@@ -30,6 +30,8 @@ def main():
             continue
 
         # If the CTF is already posted, skip it
+        # I use a local file to be persistant after reboots and to not have a list in memory
+        # The script runs every week, I don't want to keep the script running idle for a week
         ctf_id = ctf.ctftime_url.replace("/event/", "")
         ctf_ids = open("./ctf_ids.txt", "r+")
         if ctf_id in ctf_ids.read():
