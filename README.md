@@ -1,4 +1,4 @@
-A simple bot that queries ctftime's upcoming events and posts them in Discord.
+A simple bot that queries ctftime's upcoming events (RSS) and posts them in Discord.
 
 I use cron to run the script:
 ```
